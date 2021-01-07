@@ -99,6 +99,51 @@ search-btn {
   opacity: 1;
 }
 
+.single-meal {
+  margin: 30px auto;
+  width: 70%;
+}
+
+.single-meal img {
+  width: 300px;
+  margin: 15px;
+  border: 4px #ffffff solid;
+  border-radius: 2px;
+}
+
+.single-meal-info {
+  margin: 20px;
+  padding: 10px;
+  border: 2px #ffffff solid;
+  border-radius: 5px;
+  background-color: #315d68;
+}
+
+.single-meal p {
+  margin: 0;
+  padding: 5px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  background-color: #315d68;
+}
+
+.single-meal ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.single-meal ul li {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: inline-block;
+  color: #2d2013;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+}
+
 /* CSS for the snackbar that is positioned at the bottom-middle of the screen */
 #snackbar {
   /* Hidden by default. */
