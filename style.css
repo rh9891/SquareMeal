@@ -127,6 +127,12 @@ search-btn {
   background-color: #315d68;
 }
 
+.instructions {
+  border: 2px #ffffff solid;
+  background-color: #315d68;
+  padding: 20px;
+}
+
 .single-meal ul {
   padding-left: 0;
   list-style-type: none;

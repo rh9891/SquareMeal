@@ -91,7 +91,9 @@ addMealToDOM = (meal) => {
             ${meal.strArea ? `<p>${meal.strArea}</p>` : ""}
         </div>
         <div class="main">
+            <div class="instructions">
             <p>${meal.strInstructions}</p>
+            </div>
             <h2>Ingredients</h2>
             <ul>
                 ${ingredients
