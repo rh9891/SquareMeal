@@ -75,7 +75,7 @@ addMealToDOM = (meal) => {
   for (let i = 1; i <= 20; i++) {
     if (meal[`strIngredient${i}`]) {
       ingredients.push(
-        `${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`
+        `${meal[`strMeasure${i}`]} ${meal[`strIngredient${i}`]}`
       );
     } else {
       break;
@@ -86,11 +86,16 @@ addMealToDOM = (meal) => {
         <div class="single-meal">
         <h1>${meal.strMeal}</h1>
         <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+        <h2>Category</h2>
         <div class="single-meal-info">
             ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ""}
-            ${meal.strArea ? `<p>${meal.strArea}</p>` : ""}
+        </div>
+        <h2>Cuisine</h2>
+        <div class="single-meal-info">
+        ${meal.strArea ? `<p>${meal.strArea}</p>` : ""}
         </div>
         <div class="main">
+        <h2>Instructions</h2>
             <div class="instructions">
             <p>${meal.strInstructions}</p>
             </div>
