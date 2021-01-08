@@ -158,9 +158,9 @@ search-btn {
   /* Divides value of min-width by 2 */
   margin-left: -125px;
   /* Blue background color */
-  background-color: #416872;
+  background-color: #ffffff;
   /* White text color */
-  color: #ffffff;
+  color: #416872;
   /* Centered text */
   text-align: center;
   /* Rounded borders */
@@ -255,5 +255,8 @@ search-btn {
   .meal {
     height: 300px;
     width: 300px;
+  }
+  #single-meal > div > img {
+    display: none;
   }
 }
