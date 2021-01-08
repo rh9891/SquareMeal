@@ -11,7 +11,9 @@ searchMeal = (event) => {
   event.preventDefault();
 
   // Clears the single meal.
-  singleMealElement.innerHTML = "";
+  if (!mealsElement.innerHTML == "") {
+    singleMealElement.innerHTML = "";
+  }
 
   // Gets the search term
   const term = search.value;
@@ -113,7 +115,7 @@ addMealToDOM = (meal) => {
         <div class="main">
         <h2>Instructions</h2>
             <div class="instructions">
-            <p>${meal.strInstructions}</p>
+            <p>${meal.strInstructions.replace(/\./g, ".<br/>")}</p>
             </div>
             <h2>Ingredients</h2>
             <ul>
