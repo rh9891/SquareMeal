@@ -68,6 +68,22 @@ getMealByID = (mealID) => {
     });
 };
 
+// Function to fetch random meal from The Meal DB API.
+getRandomMeal = () => {
+  // Clears meals from DOM and removes any headings.
+  mealsElement.innerHTML = "";
+  resultsHeading.innerHTML = "";
+
+  fetch(`https://www.themealdb.com/api/json/v1/1/random.php
+    `)
+    .then((res) => res.json())
+    .then((data) => {
+      const meal = data.meals[0];
+
+      addMealToDOM(meal);
+    });
+};
+
 // Function to add meal to DOM.
 addMealToDOM = (meal) => {
   const ingredients = [];
@@ -110,10 +126,11 @@ addMealToDOM = (meal) => {
     `;
 };
 
-// Event listeners.
-
 // Event listener for the submit button to search meals.
 submit.addEventListener("submit", searchMeal);
+
+// Event listener for the random button to get a random meal.
+random.addEventListener("click", getRandomMeal);
 
 // Event listener for the meal element to retrieve more information.
 mealsElement.addEventListener("click", (event) => {
