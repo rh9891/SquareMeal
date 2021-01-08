@@ -67,6 +67,7 @@ getMealByID = (mealID) => {
       const meal = data.meals[0];
 
       addMealToDOM(meal);
+      scrollToMeal();
     });
 };
 
@@ -128,6 +129,14 @@ addMealToDOM = (meal) => {
     `;
 };
 
+scrollToMeal = () => {
+  singleMealElement.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+  singleMealElement.scrollBottom += 10;
+};
+
 // Event listener for the submit button to search meals.
 submit.addEventListener("submit", searchMeal);
 
@@ -144,8 +153,10 @@ mealsElement.addEventListener("click", (event) => {
     }
   });
 
+  // Checks for the meal's ID.
   if (mealInfo) {
     const mealID = mealInfo.getAttribute("data-mealid");
     getMealByID(mealID);
+    scrollToMeal();
   }
 });
