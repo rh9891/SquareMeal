@@ -61,9 +61,9 @@ To download the above video file of the application functionality, you may do so
 
 Listed below are the frameworks, libraries, and guides that made building this application possible:
 
-- [JavaScript](https://www.w3schools.com/js/default.asp)- [JavaScript Fetch API](https://www.w3schools.com/js/js_api_fetch.asp)
+- [JavaScript](https://www.w3schools.com/js/default.asp)
+- [JavaScript Fetch API](https://www.w3schools.com/js/js_api_fetch.asp)
 - [Snackbar](https://www.w3schools.com/howto/howto_js_snackbar.asp)
-- [TheMealDB API](https://www.themealdb.com/api.php)
 - [Traversy Media Tutorials](https://www.traversymedia.com)
 
 ## License
