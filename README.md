@@ -43,17 +43,15 @@ THEN
 
 ## Preview of the Square Meal
 
-![Square Meal Landing Page]()
+![Square Meal Landing Page](assets/images/squareMealLandingPage.png)
 
-The following animation demonstrates the complete application functionality:
+![Square Meal Search Results Page](assets/images/squareMealSearchResultsPage.png)
 
-![Square Meal Functionality Preview]()
-
-To download the above video file of the application functionality, you may do so [here]().
+![Square Meal Recipe Page](assets/images/squareMealRecipePage.png)
 
 ## Links
 
-- [Deployed Application]()
+- [Deployed Application](https://rh9891.github.io/SquareMeal/)
 
 - [Github Repository](https://github.com/rh9891/SquareMeal)
 

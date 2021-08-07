@@ -31,6 +31,10 @@ body {
   display: flex;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 input,
 button {
   border: 1px solid #dedede;
