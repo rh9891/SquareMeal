@@ -31,14 +31,16 @@ SO THAT I can use the provided instructions to make the meal.
 ```
 GIVEN a recipe search application
 WHEN I input the meal name into the search bar
-THEN I am presented with pictures of recipes with matching names.
+THEN I am presented with pictures of recipes with matching names on the DOM.
 
 WHEN I hover over the picture of the searched meal
 THEN the name of the meal will be displayed.
 
 WHEN I click on the picture of the searched meal
-THEN information about that meal will be displayed (category, cuisine, instructions, etc.).
+THEN further details about that meal will be displayed (category, cuisine, instructions, etc.).
 
+WHEN I click on the "random" button (adjacent to the search bar)
+THEN the application will fetch and display a random meal.
 ```
 
 ## Preview of the Square Meal
