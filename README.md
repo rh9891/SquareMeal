@@ -21,23 +21,23 @@ Square Meal is a mobile-responsive, recipe search application. The application u
 ## User Story
 
 ```
-AS A
-I WANT
-SO THAT I
+AS A user
+I WANT to search a meal name to find matching recipes
+SO THAT I can use the provided instructions to make the meal.
 ```
 
 ## Features of the Application
 
 ```
-GIVEN
-WHEN
-THEN
+GIVEN a recipe search application
+WHEN I input the meal name into the search bar
+THEN I am presented with pictures of recipes with matching names.
 
-WHEN
-THEN
+WHEN I hover over the picture of the searched meal
+THEN the name of the meal will be displayed.
 
-WHEN
-THEN
+WHEN I click on the picture of the searched meal
+THEN information about that meal will be displayed (category, cuisine, instructions, etc.).
 
 ```
 
