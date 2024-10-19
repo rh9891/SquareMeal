@@ -2,33 +2,47 @@
 const search = document.getElementById("search"),
   submit = document.getElementById("submit"),
   random = document.getElementById("random"),
+  reset = document.getElementById("reset"),
   mealsElement = document.getElementById("meals"),
   resultsHeading = document.getElementById("results-heading"),
   singleMealElement = document.getElementById("single-meal");
 
+// Function to update the placeholder text based on screen width.
+const updatePlaceholder = () => {
+  if (window.innerWidth <= 500) {
+    search.placeholder = "Search for a meal...";
+  } else {
+    search.placeholder = "Search a meal to find matching recipes...";
+  }
+};
+
+// Call the updatePlaceholder function on load and resize.
+window.addEventListener("load", updatePlaceholder);
+window.addEventListener("resize", updatePlaceholder);
+
 // Function to search meal and fetch results from TheMealDB API.
-searchMeal = (event) => {
+const searchMeal = (event) => {
   event.preventDefault();
 
   // Clears the single meal.
-  if (!mealsElement.innerHTML == "") {
-    singleMealElement.innerHTML = "";
-  }
+  singleMealElement.innerHTML = "";
 
-  // Gets the search term
+  // Gets the search term and loader.
   const term = search.value;
+  const loader = document.querySelector(".loader");
 
   // Checks for empty search term and fetches data if there is input.
   if (term.trim()) {
+    if (loader) loader.style.display = "block";
+
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}
       `)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         resultsHeading.innerHTML = `<h2>Search results for "${term}":</h2>`;
 
         if (data.meals === null) {
-          resultsHeading.innerHTML = `<p>There are no search results for "${term}". Please try again.</p>`;
+          resultsHeading.innerHTML = `<h2>There are no search results for "${term}". Please try again.</h2>`;
         } else {
           mealsElement.innerHTML = data.meals
             .map(
@@ -41,7 +55,11 @@ searchMeal = (event) => {
             )
             .join("");
         }
+      })
+      .finally(() => {
+        if (loader) loader.style.display = "none";
       });
+
     // Clears search text.
     search.value = "";
   } else {
@@ -65,7 +83,6 @@ getMealByID = (mealID) => {
     .then((res) => res.json())
     .then((data) => {
       const meal = data.meals[0];
-
       addMealToDOM(meal);
       scrollToMeal();
     });
@@ -76,6 +93,11 @@ getRandomMeal = () => {
   // Clears meals from DOM and removes any headings.
   mealsElement.innerHTML = "";
   resultsHeading.innerHTML = "";
+  singleMealElement.innerHTML = "";
+
+  // Gets and displays loader.
+  const loader = document.querySelector(".loader");
+  if (loader) loader.style.display = "block";
 
   fetch(`https://www.themealdb.com/api/json/v1/1/random.php
     `)
@@ -84,6 +106,9 @@ getRandomMeal = () => {
       const meal = data.meals[0];
 
       addMealToDOM(meal);
+    })
+    .finally(() => {
+      if (loader) loader.style.display = "none";
     });
 };
 
@@ -134,7 +159,6 @@ scrollToMeal = () => {
     behavior: "smooth",
     block: "start",
   });
-  singleMealElement.scrollBottom += 10;
 };
 
 // Event listener for the submit button to search meals.
@@ -145,18 +169,27 @@ random.addEventListener("click", getRandomMeal);
 
 // Event listener for the meal element to retrieve more information.
 mealsElement.addEventListener("click", (event) => {
-  const mealInfo = event.path.find((item) => {
-    if (item.classList) {
-      return item.classList.contains("meal-info");
-    } else {
-      return false;
-    }
-  });
+  const mealInfo = event.target.closest(".meal-info");
 
   // Checks for the meal's ID.
   if (mealInfo) {
     const mealID = mealInfo.getAttribute("data-mealid");
     getMealByID(mealID);
-    scrollToMeal();
   }
 });
+
+// Function to reset and clear the page.
+const resetSearch = () => {
+  search.value = "";
+
+  // Clears the results and single meal display.
+  mealsElement.innerHTML = "";
+  singleMealElement.innerHTML = "";
+  resultsHeading.innerHTML = "";
+
+  const notification = document.getElementById("snackbar");
+  notification.className = "";
+};
+
+// Event listener for the reset button to clear the page.
+reset.addEventListener("click", resetSearch);

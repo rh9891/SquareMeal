@@ -5,16 +5,28 @@
 }
 
 body {
-  /* Photo credit to Kamran Aydinov */
-  background: url(assets/images/vegetableComposition.jpg) no-repeat center
-    center fixed;
+  color: #6e4b33;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  overflow: scroll;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(assets/images/squareMeal.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #ffffff;
-  font-family: "Karla", sans-serif;
-  margin: 0;
+  opacity: 0.5;
+  z-index: -1;
+  min-height: 100vh;
 }
 
 .container {
@@ -25,19 +37,26 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 100vh;
 }
 
 .flex {
   display: flex;
+  justify-content: space-around;
 }
 
 h1 {
   font-size: 2rem;
+  color: #39312c;
+}
+
+p {
+  color: #ffffff;
 }
 
 input,
 button {
-  border: 1px solid #dedede;
+  border: 1px solid #ffffff;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   font-size: 14px;
@@ -47,9 +66,15 @@ button {
 
 input[type="text"] {
   width: 300px;
+  background: #ffffff;
+  color: black;
 }
 
-search-btn {
+.search-bar {
+  display: flex;
+}
+
+.search-btn {
   cursor: pointer;
   border-left: 0;
   border-radius: 0;
@@ -57,11 +82,17 @@ search-btn {
   border-bottom-right-radius: 4px;
 }
 
-.random-btn {
+.square-meal-description {
+  color: #39312c;
+  margin: 24px;
+}
+
+.random-btn,
+.reset-btn {
   cursor: pointer;
-  margin-left: 10px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  margin-left: 8px;
 }
 
 .meals {
@@ -91,12 +122,14 @@ search-btn {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.2s ease-in;
   opacity: 0;
+  color: #bab7ae;
+  padding: 8px;
 }
 
 .meal:hover .meal-info {
@@ -106,6 +139,9 @@ search-btn {
 .single-meal {
   margin: 30px auto;
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .single-meal img {
@@ -120,19 +156,19 @@ search-btn {
   padding: 10px;
   border: 2px #ffffff solid;
   border-radius: 5px;
-  background-color: #315d68;
+  background-color: #6e4b33;
 }
 
 .single-meal p {
   margin: 0;
   letter-spacing: 0.5px;
   line-height: 1.5;
-  background-color: #315d68;
+  background-color: #6e4b33;
 }
 
 .instructions {
   border: 2px #ffffff solid;
-  background-color: #315d68;
+  background-color: #6e4b33;
   padding: 20px;
 }
 
@@ -146,7 +182,7 @@ search-btn {
   border-radius: 5px;
   background-color: #ffffff;
   display: inline-block;
-  color: #2d2013;
+  color: #39312c;
   font-size: 12px;
   font-weight: bold;
   padding: 5px;
@@ -161,10 +197,8 @@ search-btn {
   min-width: 250px;
   /* Divides value of min-width by 2 */
   margin-left: -125px;
-  /* Blue background color */
   background-color: #ffffff;
-  /* White text color */
-  color: #416872;
+  color: #8d6e47;
   /* Centered text */
   text-align: center;
   /* Rounded borders */
@@ -188,6 +222,16 @@ search-btn {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.loader {
+  border: 16px solid #39312c;
+  border-radius: 50%;
+  border-top: 16px solid #8d6e47;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
 }
 
 /* Animations to fade the snackbar in and out */
@@ -232,6 +276,24 @@ search-btn {
   to {
     bottom: 0;
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
