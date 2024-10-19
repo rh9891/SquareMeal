@@ -53,7 +53,7 @@ THEN the application will fetch and display a random meal.
 
 ## Links
 
-- [Deployed Application](https://rh9891.github.io/SquareMeal/)
+- [Deployed Application](https://square-meal.netlify.app)
 
 - [Github Repository](https://github.com/rh9891/SquareMeal)
 
