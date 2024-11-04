@@ -3,7 +3,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
-
 - [Description](#description)
 - [User Story](#user-story)
 - [Features of the Application](#features-of-the-application)
@@ -50,6 +49,8 @@ THEN the application will fetch and display a random meal.
 ![Square Meal Search Results Page](assets/images/squareMealSearchResultsPage.png)
 
 ![Square Meal Recipe Page](assets/images/squareMealRecipePage.png)
+
+![Square Meal Functionality](https://github.com/user-attachments/assets/c9182b67-cdcb-4b87-abf2-0ddeee55eba7)
 
 ## Links
 
