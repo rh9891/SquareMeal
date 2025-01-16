@@ -1,7 +1,6 @@
 # Square Meal
 
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)  
-![Netlify Status](https://api.netlify.com/api/v1/badges/fc1b3a7c-6cb4-44a4-9e33-123456789abc/deploy-status)  
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?logo=javascript&logoColor=black)  
 ![API](https://img.shields.io/badge/API-TheMealDB-ff6f00?logo=api&logoColor=white)  
 ![Responsive](https://img.shields.io/badge/Responsive-Mobile--First-blue)  
