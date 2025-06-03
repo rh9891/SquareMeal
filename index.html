@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,12 +32,14 @@
   </head>
   <body>
     <div class="container">
-      <h1>Square Meal</h1>
-      <p class="square-meal-description">
-        Explore a world of culinary delights with Square Meal, your go-to recipe
-        search app. From savory dishes to sweet treats, discover over 250
-        recipes at your fingertips and unleash your inner chef!
-      </p>
+      <header>
+        <h1>Square Meal</h1>
+        <p class="square-meal-description">
+          Explore a world of culinary delights with Square Meal, your go-to
+          recipe search app. From savory dishes to sweet treats, discover over
+          250 recipes at your fingertips and unleash your inner chef!
+        </p>
+      </header>
       <form id="submit">
         <div class="search-bar">
           <input
@@ -51,19 +53,17 @@
           <button class="random-btn" id="random" type="button">
             <i class="fas fa-random"></i>
           </button>
-          <button type="button" class="reset-btn" id="reset" type="button">
+          <button class="reset-btn" id="reset" type="button">
             <i class="fas fa-refresh"></i>
           </button>
         </div>
       </form>
-
       <div id="results-heading"></div>
       <div class="meals" id="meals"></div>
       <div class="loader" style="display: none"></div>
       <div id="single-meal"></div>
       <div id="snackbar">Please enter a search term.</div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

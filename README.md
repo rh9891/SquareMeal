@@ -1,11 +1,9 @@
 # Square Meal
 
-![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)  
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?logo=javascript&logoColor=black)  
-![API](https://img.shields.io/badge/API-TheMealDB-ff6f00?logo=api&logoColor=white)  
-![Responsive](https://img.shields.io/badge/Responsive-Mobile--First-blue)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
+
 - [Description](#description)
 - [User Story](#user-story)
 - [Features of the Application](#features-of-the-application)
@@ -13,7 +11,6 @@
 - [Links](#links)
 - [Built Using](#built-using)
 - [License](#license)
-- [Contributing](#contributing)
 - [Questions](#questions)
 
 ## Description
@@ -53,8 +50,6 @@ THEN the application will fetch and display a random meal.
 
 ![Square Meal Recipe Page](assets/images/squareMealRecipePage.png)
 
-![Square Meal Functionality](https://github.com/user-attachments/assets/cda73a7d-c22d-4a44-9e0f-96f75be266f0)
-
 ## Links
 
 - [Deployed Application](https://square-meal.netlify.app)
@@ -81,10 +76,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-## Contributing
-
-If you would like to contribute to this repository, please contact me via [Github](https://github.com/rh9891).
 
 ## Questions
 
